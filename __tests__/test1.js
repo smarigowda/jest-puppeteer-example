@@ -1,4 +1,6 @@
-const timeout = 5000
+const timeout = 500000;
+
+jest.setTimeout(120000);
 
 describe(
   '/ (Home Page)',
@@ -14,6 +16,7 @@ describe(
     })
 
     it('should load without error', async () => {
+      await page.evaluate(() => {debugger;});
       let text = await page.evaluate(() => document.body.textContent)
       expect(text).toContain('google')
     })

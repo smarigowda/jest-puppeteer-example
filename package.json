@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "chalk": "^2.3.0",
